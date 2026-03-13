@@ -99,38 +99,38 @@ The application uses a PostgreSQL database named **streakify_db** with three mai
 These tables maintain relationships to track users, their habits, and daily habit logs.
 
 ---
-
 ### Users Table
 
-| Column Name | Data Type |
-|-------------|-----------|
-| id | BIGSERIAL (PRIMARY KEY) |
-| name | VARCHAR(100) (NOT NULL) |
-| email | VARCHAR(150) (UNIQUE, NOT NULL) |
-| created_at | TIMESTAMP (DEFAULT CURRENT_TIMESTAMP) |
+| Column Name | Data Type                               |
+| ----------- | --------------------------------------- |
+| id          | BIGSERIAL **PRIMARY KEY**               |
+| name        | VARCHAR(100) **NOT NULL**               |
+| email       | VARCHAR(150) **UNIQUE, NOT NULL**       |
+| created_at  | TIMESTAMP **DEFAULT CURRENT_TIMESTAMP** |
 
 ---
 
 ### Habits Table
 
-| Column Name | Data Type |
-|-------------|-----------|
-| id | BIGSERIAL (PRIMARY KEY) |
-| name | VARCHAR(100) (NOT NULL) |
-| target_days_per_week | INT (NOT NULL) |
-| user_id | BIGINT (NOT NULL, FOREIGN KEY → users(id), ON DELETE CASCADE) |
-| created_at | TIMESTAMP (DEFAULT CURRENT_TIMESTAMP) |
+| Column Name          | Data Type                                                      |
+| -------------------- | -------------------------------------------------------------- |
+| id                   | BIGSERIAL **PRIMARY KEY**                                      |
+| name                 | VARCHAR(100) **NOT NULL**                                      |
+| target_days_per_week | INT **NOT NULL**                                               |
+| user_id              | BIGINT **NOT NULL, FOREIGN KEY → users(id) ON DELETE CASCADE** |
+| created_at           | TIMESTAMP **DEFAULT CURRENT_TIMESTAMP**                        |
 
 ---
 
 ### Habit Logs Table
 
-| Column Name | Data Type |
-|-------------|-----------|
-| id | BIGSERIAL (PRIMARY KEY) |
-| habit_id | BIGINT (NOT NULL, FOREIGN KEY → habits(id), ON DELETE CASCADE) |
-| log_date | DATE (NOT NULL) |
-| completed | BOOLEAN (NOT NULL) |
+| Column Name | Data Type                                                       |
+| ----------- | --------------------------------------------------------------- |
+| id          | BIGSERIAL **PRIMARY KEY**                                       |
+| habit_id    | BIGINT **NOT NULL, FOREIGN KEY → habits(id) ON DELETE CASCADE** |
+| log_date    | DATE **NOT NULL**                                               |
+| completed   | BOOLEAN **NOT NULL**                                            |
+
 
 Additional Constraint:
 
