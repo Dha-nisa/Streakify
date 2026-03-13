@@ -55,7 +55,7 @@ API Testing
 # System Architecture
 ```
 
-Client (Postman / Frontend)
+Client (Postman)
         │
         ▼
  Controller Layer
@@ -329,15 +329,100 @@ streakify
 
 # Screenshots
 
-Add screenshots such as:
+### Create User
 
-• Postman API testing  
-• Database tables in pgAdmin  
-• Dashboard API response  
+<img width="1438" height="698" alt="Screenshot 2026-03-11 171201" src="https://github.com/user-attachments/assets/25c6d5e2-e355-4922-a166-c445e4c3d704" />
 
-Example folder
+### Get User
 
-docs/screenshots/
+<img width="1459" height="690" alt="Screenshot 2026-03-11 171607" src="https://github.com/user-attachments/assets/be3265ec-de28-4230-a7a8-eacba9ccb95a" />
+
+### Delete User
+
+<img width="1455" height="611" alt="Screenshot 2026-03-11 171810" src="https://github.com/user-attachments/assets/6821a9af-f048-41bc-82bc-2027b885e172" />
+
+### Create Habit
+
+<img width="1451" height="688" alt="Screenshot 2026-03-11 172511" src="https://github.com/user-attachments/assets/7997fbd1-307a-4821-a83c-989ac658ffc7" />
+
+### Get User Habit
+
+<img width="1451" height="953" alt="Screenshot 2026-03-11 173817" src="https://github.com/user-attachments/assets/e0568f02-aeee-4d57-beda-c3bd9da05abc" />
+
+### Delete Habit
+
+<img width="1450" height="780" alt="Screenshot 2026-03-12 102813" src="https://github.com/user-attachments/assets/0de59144-0685-4b91-aac9-51f293830540" />
+
+### Habit Log Day1
+
+<img width="1454" height="823" alt="Screenshot 2026-03-12 104617" src="https://github.com/user-attachments/assets/93902072-68d1-48be-9f31-656891232948" />
+
+### Habit Log Day2
+
+<img width="1451" height="790" alt="image" src="https://github.com/user-attachments/assets/3348fd74-7314-45a0-9aab-36bca8027ddd" />
+
+### Habit Log Day3
+
+
+<img width="1450" height="819" alt="image" src="https://github.com/user-attachments/assets/be93dd19-80c3-4742-883a-30e09ee65561" />
+
+
+### Habit Log Day4
+
+<img width="1444" height="867" alt="image" src="https://github.com/user-attachments/assets/b12e6f6c-0113-46b3-b879-d9bda9d12511" />
+
+### Fetch Streak
+
+
+<img width="1446" height="763" alt="image" src="https://github.com/user-attachments/assets/d7341f11-c876-4e40-8282-dbcd91ffbd5c" />
+
+### Dashboard
+
+<img width="1456" height="1002" alt="Screenshot 2026-03-12 124644" src="https://github.com/user-attachments/assets/248e71f2-771d-41f9-a11d-b86dd7faf064" />
+
+## Negative Cases
+
+### Duplicate Email
+
+<img width="1434" height="617" alt="Screenshot 2026-03-11 171338" src="https://github.com/user-attachments/assets/0ac3521b-9ffc-4980-9b7f-643adda0c321" />
+
+
+### Invalid Email
+
+
+<img width="1455" height="707" alt="Screenshot 2026-03-11 171447" src="https://github.com/user-attachments/assets/c30c111e-9dce-4989-8269-6e3179b821d5" />
+
+### User Not Found
+
+<img width="1453" height="723" alt="Screenshot 2026-03-11 171653" src="https://github.com/user-attachments/assets/40ec7a31-dcbc-491d-b259-a67b8eec2fa3" />
+
+### User Not Found With Habit Id
+
+
+<img width="1440" height="742" alt="image" src="https://github.com/user-attachments/assets/543f4439-a202-4fb4-81e1-e49578e61c33" />
+
+### Deleting a Non Exsisting Habit
+
+
+<img width="1451" height="783" alt="image" src="https://github.com/user-attachments/assets/193d347e-e277-47d1-b5ab-0915a61fb1de" />
+
+### Future Date Not Allowed
+
+
+<img width="1451" height="826" alt="Screenshot 2026-03-12 105429" src="https://github.com/user-attachments/assets/91bc2f01-682d-4921-845c-03a592620ebd" />
+
+
+### Habit Not Found
+
+
+<img width="1443" height="733" alt="image" src="https://github.com/user-attachments/assets/6e97e777-a1b2-4a50-b881-2db369e10428" />
+
+
+### Duplicate Logs
+
+
+<img width="1453" height="829" alt="Screenshot 2026-03-12 105154" src="https://github.com/user-attachments/assets/2de9c487-774a-45e8-a7d2-72969190a42f" />
+
 
 ---
 
