@@ -239,48 +239,113 @@ Once the application starts successfully, it will run at:
 http://localhost:8080
 ```
 
-# Sample API Requests
+## Sample Request and Response
 
-Create User
+### 1. Create User
+
+**Request**
 
 POST /users
 
+```json
 {
-  "name": "John",
-  "email": "john@example.com"
+  "name": "Vismaya",
+  "email": "vismaya@example.com"
 }
+```
 
-Create Habit
+**Response**
+
+```json
+{
+  "id": 1,
+  "name": "Vismaya",
+  "email": "vismaya@example.com"
+}
+```
+
+---
+
+### 2. Create Habit
+
+**Request**
 
 POST /habits
 
+```json
 {
-  "name": "Workout",
-  "targetDaysPerWeek": 5,
+  "name": "Morning Workout",
+  "target_days_per_week": 5,
   "userId": 1
 }
+```
 
-Log Habit Completion
+**Response**
+
+```json
+{
+  "id": 10,
+  "name": "Morning Workout",
+  "target_days_per_week": 5,
+  "userId": 1
+}
+```
+
+---
+
+### 3. Create Habit Log
+
+**Request**
 
 POST /habits/{habitId}/logs
 
+Example:
+
+POST /habits/10/logs
+
+```json
 {
-  "logDate": "2026-03-12",
+  "logDate": "2026-03-11",
   "completed": true
 }
+```
 
-Dashboard Example Response
+**Response**
 
-GET /users/{userId}/dashboard
-
+```json
 {
-  "totalHabits": 2,
-  "activeHabits": 2,
-  "completedToday": 1,
-  "currentStreaks": [],
-  "consistencyScore": 50
+  "id": 58,
+  "logDate": "2026-03-11",
+  "completed": true,
+  "weeklyStatus": "In Progress"
 }
+```
 
+---
+
+### 4. Productivity Dashboard
+
+**Request**
+
+GET /dashboard
+
+**Response**
+
+```json
+{
+  "totalHabits": 4,
+  "activeHabits": 3,
+  "completedToday": 2,
+  "currentStreaks": [
+    {
+      "habitName": "Morning Workout",
+      "currentStreak": 5,
+      "longestStreak": 10
+    }
+  ],
+  "consistencyScore": 82
+}
+```
 ---
 
 # Project Structure
